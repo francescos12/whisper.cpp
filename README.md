@@ -700,6 +700,23 @@ https://user-images.githubusercontent.com/1991296/223206245-2d36d903-cf8e-4f09-8
 
 ---
 
+## Background removal GUI (experimental)
+
+A small Tkinter interface is available at [extra/rembg-watcher/gui.py](extra/rembg-watcher/gui.py) for users who prefer a GUI
+workflow when removing image backgrounds with
+[backgroundremover](https://github.com/nadermx/backgroundremover).
+
+```bash
+pip install backgroundremover pillow
+python3 extra/rembg-watcher/gui.py
+```
+
+The tool lets you choose an input image, pick the output location and set the desired PPI value. After backgroundremover
+produces the cut-out image (via the Python API when available, or by invoking the CLI) the GUI reloads the result with Pillow
+and saves it again with the specified DPI metadata without altering the pixel dimensions.
+
+---
+
 ## Benchmarks
 
 In order to have an objective comparison of the performance of the inference across different system configurations,
